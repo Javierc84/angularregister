@@ -1,3 +1,4 @@
+import { ComponentsModule } from './component.module';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,10 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    RegisterComponent,
-    LoginComponent
+  AppComponent
   
   ],
   imports: [
@@ -24,9 +22,12 @@ import { LoginComponent } from './components/login/login.component';
     NgbModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
-  providers: [],
+  providers: [
+    ComponentsModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
